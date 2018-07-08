@@ -1,6 +1,7 @@
 *.log
 data/cache/
 data/session/
+data/log/
 data/dbconfig.php
 
 /.htaccess
@@ -8,4 +9,8 @@ data/dbconfig.php
 /readme.html
 /sitemap.xml
 /sitemap.xml.gz
+
+.hg/
+.idea/
+.hgignore
 

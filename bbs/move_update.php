@@ -195,7 +195,7 @@ if ($sw == 'move')
     sql_query(" update {$g5['board_table']} set bo_count_write = bo_count_write - '$save_count_write', bo_count_comment = bo_count_comment - '$save_count_comment' where bo_table = '$bo_table' ");
 }
 
-$msg = '已将所选内容'.$act.到您选择的论坛版块';
+$msg = '已将所选内容'.$act.'到您选择的论坛版块';
 $opener_href  = './board.php?bo_table='.$bo_table.'&amp;page='.$page.'&amp;'.$qstr;
 $opener_href1 = str_replace('&amp;', '&', $opener_href);
 

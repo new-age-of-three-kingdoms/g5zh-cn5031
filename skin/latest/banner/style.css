@@ -1,0 +1,24 @@
+@charset "utf-8";
+/* SIR 子云爸爸 */
+
+/* 最新内容皮肤 (latest) */
+.banner_pc {float:left;margin-left:20px}
+.banner {position:relative;float:left;margin-bottom:20px;padding:0 0; border-top:solid 1px #d6d6d6; height:455px; width:960px;}
+.banner ul {margin:60px 0 10px;padding:0;list-style:none}
+.banner li {padding:0 0; float:left;margin:3px 3px;}
+.banner li div.title {width:100%; heigth:32px;line-height:32px; vertical-align:middle;}
+.banner li div.title2  {width:100%; heigth:20px;line-height:20px; vertical-align:middle; float:left; color:#898989;}
+.banner li div.title a {float:left;}
+.banner li div.title span {float:right;font-size:14px;}
+.banner li.left {margin:3px 3px 3px 0;}
+.banner li img {margin:0;}
+.banner li.right {margin:3px 0 3px 3px;}
+.banner li a {font-size:16px; color:#3e3a39; line-height:32px; vertical-align:middle;}
+.banner li span {font-size:12px; color:#898989;}
+.banner .banner_title {display:block;padding:10px 0 8px}
+.banner .banner_more {position:absolute;top:10px;right:0}
+.banner .cnt_cmt {display:inline-block;margin:0 0 0 3px;font-weight:bold}
+.banner .latest_title {width:100%; height:32px; margin:30px 0 0 0;}
+.banner .latest_title .left {float:left;}
+.banner .latest_title .right {float:right;}
+.banner .latest_title .right img {margin:0 10px;}
