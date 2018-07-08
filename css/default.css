@@ -34,7 +34,7 @@ a:hover, a:focus, a:active {color:#000;text-decoration:underline}
 #hd {z-index:4;position:relative;min-width:970px;background:#fff}
 .hd_zindex {z-index:10 !important}
 #hd_h1 {position:absolute;font-size:0;line-height:0;overflow:hidden}
-#hd_wrapper {position:relative;margin:0 auto;padding:26px 0;width:970px;zoom:1}
+#hd_wrapper {position:relative;margin:0 auto;padding:26px 0;width:960px;zoom:1}
 #hd_wrapper:after {display:block;visibility:hidden;clear:both;content:""}
 
 #logo {float:left;padding:5px 0 0}
