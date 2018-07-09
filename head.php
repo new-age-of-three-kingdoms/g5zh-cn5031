@@ -26,8 +26,6 @@ if (G5_IS_MOBILE) {
 <?php include_once(G5_PATH.'/top.php');?>
 <!-- } 顶部结束 -->
 
-<hr>
-
 <!-- 项目开始 { -->
 <div id="wrapper" <?php echo $co_id == 'aboutus' ? "style='background:url(/img/bg_aboutus.jpg) 190% 2% no-repeat;'":""; ?>>
     <div id="container">

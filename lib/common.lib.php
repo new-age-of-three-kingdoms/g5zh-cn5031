@@ -23,15 +23,17 @@ function get_paging($write_pages, $cur_page, $total_page, $url, $add="")
 
     $str = '';
     if ($cur_page > 1) {
-        $str .= '<a href="'.$url.'1'.$add.'" class="pg_page pg_start">首页</a>'.PHP_EOL;
+        $str .= '<a href="'.$url.'1'.$add.'" class="pg_page pg_start"><img src="/img/pg_prev.jpg" ></a>'.PHP_EOL;
     }
+	else
+	    $str .= '<a class="pg_page pg_start"><img src="/img/pg_prev.jpg" ></a>'.PHP_EOL;
 
     $start_page = ( ( (int)( ($cur_page - 1 ) / $write_pages ) ) * $write_pages ) + 1;
     $end_page = $start_page + $write_pages - 1;
 
     if ($end_page >= $total_page) $end_page = $total_page;
 
-    if ($start_page > 1) $str .= '<a href="'.$url.($start_page-1).$add.'" class="pg_page pg_prev">上一步</a>'.PHP_EOL;
+    if ($start_page > 1) $str .= '<a href="'.$url.($start_page-1).$add.'" class="pg_page pg_prev"><img src="/img/pg_prev.jpg" ></a>'.PHP_EOL;
 
     if ($total_page > 1) {
         for ($k=$start_page;$k<=$end_page;$k++) {
@@ -42,11 +44,13 @@ function get_paging($write_pages, $cur_page, $total_page, $url, $add="")
         }
     }
 
-    if ($total_page > $end_page) $str .= '<a href="'.$url.($end_page+1).$add.'" class="pg_page pg_next">下一步</a>'.PHP_EOL;
+    if ($total_page > $end_page) $str .= '<a href="'.$url.($end_page+1).$add.'" class="pg_page pg_next"><img src="/img/pg_next.jpg" ></a>'.PHP_EOL;
 
     if ($cur_page < $total_page) {
-        $str .= '<a href="'.$url.$total_page.$add.'" class="pg_page pg_end">最后</a>'.PHP_EOL;
+        $str .= '<a href="'.$url.$total_page.$add.'" class="pg_page pg_end"><img src="/img/pg_next.jpg" ></a>'.PHP_EOL;
     }
+	else
+	    $str .= '<a class="pg_page pg_end"><img src="/img/pg_next.jpg" ></a>'.PHP_EOL;
 
     if ($str)
         return "<nav class=\"pg_wrap\"><span class=\"pg\">{$str}</span></nav>";
@@ -216,7 +220,7 @@ function url_auto_link($str)
     // http://sir.co.kr/bbs/board.php?bo_table=pg_lecture&wr_id=463
     $str = str_replace(array("&lt;", "&gt;", "&amp;", "&quot;", "&nbsp;", "&#039;"), array("\t_lt_\t", "\t_gt_\t", "&", "\"", "\t_nbsp_\t", "'"), $str);
     //$str = preg_replace("`(?:(?:(?:href|src)\s*=\s*(?:\"|'|)){0})((http|https|ftp|telnet|news|mms)://[^\"'\s()]+)`", "<A HREF=\"\\1\" TARGET='{$config['cf_link_target']}'>\\1</A>", $str);
-    $str = preg_replace("/([^(href=\"?'?)|(src=\"?'?)]|\(|^)((http|https|ftp|telnet|news|mms):\/\/[a-zA-Z0-9\.-]+\.[一-龥豈-鶴\xA1-\xFEa-zA-Z0-9\.:&#=_\?\/~\+%@;\-\|\,\(\)]+)/i", "\\1<A HREF=\"\\2\" TARGET=\"{$config['cf_link_target']}\">\\2</A>", $str);
+    $str = preg_replace("/([^(href=\"?'?)|(src=\"?'?)]|\(|^)((http|https|ftp|telnet|news|mms):\/\/[a-zA-Z0-9\.-]+\.[一-龥豈-鶴\xA1-\xFEa-zA-Z0-9\.:&#=_\?\/~\+%@;\-\|\,\(\)]+)/i", "\\1<A HREF=\"\\2\" TARGET=\"{$config['cf_link_target']}\">\\2</A>", $str);
     $str = preg_replace("/(^|[\"'\s(])(www\.[^\"'\s()]+)/i", "\\1<A HREF=\"http://\\2\" TARGET=\"{$config['cf_link_target']}\">\\2</A>", $str);
     $str = preg_replace("/[0-9a-z_-]+@[a-z0-9._-]{4,}/i", "<a href=\"mailto:\\0\">\\0</a>", $str);
     $str = str_replace(array("\t_nbsp_\t", "\t_lt_\t", "\t_gt_\t", "'"), array("&nbsp;", "&lt;", "&gt;", "&#039;"), $str);
@@ -232,7 +236,7 @@ function url_auto_link($str)
     //$str = preg_replace("/([^(HREF=\"?'?)|(SRC=\"?'?)]|\(|^)((http|https|ftp|telnet|news|mms):\/\/[a-zA-Z0-9\.-]+\.[\xA1-\xFEa-zA-Z0-9\.:&#=_\?\/~\+%@;\-\|\,]+)/i", "\\1<A HREF=\"\\2\" TARGET='$config['cf_link_target']'>\\2</A>", $str);
     // 100825 : () 添加
     // 120315 : CHARSET 由于存在字符被截断现象而修改
-    $str = preg_replace("/([^(HREF=\"?'?)|(SRC=\"?'?)]|\(|^)((http|https|ftp|telnet|news|mms):\/\/[a-zA-Z0-9\.-]+\.[一-龥豈-鶴\xA1-\xFEa-zA-Z0-9\.:&#=_\?\/~\+%@;\-\|\,\(\)]+)/i", "\\1<A HREF=\"\\2\" TARGET='{$config['cf_link_target']}'>\\2</A>", $str);
+    $str = preg_replace("/([^(HREF=\"?'?)|(SRC=\"?'?)]|\(|^)((http|https|ftp|telnet|news|mms):\/\/[a-zA-Z0-9\.-]+\.[一-龥豈-鶴\xA1-\xFEa-zA-Z0-9\.:&#=_\?\/~\+%@;\-\|\,\(\)]+)/i", "\\1<A HREF=\"\\2\" TARGET='{$config['cf_link_target']}'>\\2</A>", $str);
 
     // 邮件地址正则表达式 061004
     //$str = preg_replace("/(([a-z0-9_]|\-|\.)+@([^[:space:]]*)([[:alnum:]-]))/i", "<a href='mailto:\\1'>\\1</a>", $str);

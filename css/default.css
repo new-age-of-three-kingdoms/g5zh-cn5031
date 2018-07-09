@@ -278,12 +278,13 @@ a.btn_admin:focus, a.btn_admin:hover {text-decoration:none}
 /* 分页 */
 .pg_wrap {clear:both;margin:0 0 20px;padding:20px 0 0;text-align:center}
 .pg {}
-.pg_page, .pg_current {display:inline-block;padding:0 8px;height:25px;color:#000;letter-spacing:0;line-height:2.2em;vertical-align:middle}
+.pg_page, .pg_current {display:inline-block; border-right:solid 1px #bfbfbf; padding:0 4px 0 0;height:10px;color:#000;line-height:10px;vertical-align:middle; text-align:center;}
 .pg a:focus, .pg a:hover {text-decoration:none}
-.pg_page {background:#e4eaec;text-decoration:none}
-.pg_start, .pg_prev {/* 上一步 */}
-.pg_end, .pg_next {/* 下一步 */}
-.pg_current {display:inline-block;margin:0 4px 0 0;background:#333;color:#fff;font-weight:normal}
+.pg_page {text-decoration:none; font-weight:bold;}
+.pg_page:last-child {border-right:solid 0px #bfbfbf; }
+.pg_start, .pg_prev {/* 上一步 */ border-right:solid 1px #bfbfbf; padding-bottom:2px;}
+.pg_end, .pg_next {/* 下一步 */ border-right:solid 0px #bfbfbf;padding-bottom:2px;}
+.pg_current {display:inline-block;margin:0 4px 0 0;color:#f00;font-weight:bold;}
 
 /* 触屏版 */
 #device_change {display:block;margin:0.3em;padding:0.5em 0;border:1px solid #eee;border-radius:2em;background:#fff;color:#000;font-size:2em;text-decoration:none;text-align:center}

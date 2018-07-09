@@ -195,10 +195,12 @@ html.no-overflowscrolling #autosave_pop {height:auto;max-height:10000px !importa
 #bo_v_bot h2 {position:absolute;font-size:0;line-height:0;overflow:hidden}
 #bo_v_bot ul {margin:0;padding:0;list-style:none}
 
-.bo_v_nb {float:left}
-.bo_v_nb li {float:left;margin-right:5px}
+.bo_v_nb {/*float:left;*/ text-align:center; width:100%; height:24px;}
+.bo_v_nb li {float:left;margin-right:5px; height:24px;}
 .bo_v_com {float:right}
 .bo_v_com li {float:left;margin-left:5px}
+
+.bo_v_nb a {font-weight:bold; color:#000; text-decoration:none;}
 
 #bo_v_atc {min-height:200px;height:auto !important;height:200px}
 #bo_v_atc_title {position:absolute;font-size:0;line-height:0;overflow:hidden}

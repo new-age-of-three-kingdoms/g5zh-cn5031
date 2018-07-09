@@ -45,3 +45,9 @@ if (!defined('_GNUBOARD_')) exit; //禁止单独访问此页
 
     <hr>
 </div>
+
+
+<div id="main_carusel">
+	<?php echo latest("slider", "slide", 6, 25, 1, "960,410"); ?>
+	<?php //echo latest("slider", "slide", 6, 25, 1, "640,480"); ?>
+</div>

@@ -7,7 +7,7 @@
 .lt ul {margin:0 0 10px;padding:0;list-style:none}
 .lt li {padding:3px 0; float:left;margin:10px 15px!important;}
 .lt li div.title {width:100%; heigth:32px;line-height:32px; vertical-align:middle;}
-.lt li div.title2  {width:100%; heigth:20px;line-height:20px; vertical-align:middle; float:left; color:#898989;}
+.lt li div.title2  {text-align:left; width:100%; heigth:20px;line-height:20px; vertical-align:middle; float:left; color:#898989;}
 .lt li div.title a {float:left;}
 .lt li div.title span {float:right;font-size:14px;}
 .lt li.left {margin:10px 15px 10px 0!important;}

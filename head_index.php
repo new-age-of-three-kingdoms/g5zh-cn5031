@@ -26,10 +26,6 @@ if (G5_IS_MOBILE) {
 <?php include_once(G5_PATH.'/top.php');?>
 <!-- } 顶部结束 -->
 
-<div id="main_carusel">
-
-</div>
-
 <!-- 项目开始 { -->
 <div id="wrapper">
         <?php if ((!$bo_table || $w == 's' ) && !defined("_INDEX_")) { ?><div id="container_title"><?php echo $g5['title'] ?></div><?php } ?>

@@ -86,35 +86,6 @@ add_stylesheet('<link rel="stylesheet" href="'.$board_skin_url.'/style.css">', 0
     <!-- } 链接地址结束 -->
     <?php } ?>
 
-    <!-- 论坛顶部按钮开始 { -->
-    <div id="bo_v_top">
-        <?php
-        ob_start();
-         ?>
-        <?php if (($prev_href || $next_href) && $is_admin) { ?>
-        <ul class="bo_v_nb">
-            <?php if ($prev_href) { ?><li><a href="<?php echo $prev_href ?>" class="btn_b01">上一篇</a></li><?php } ?>
-            <?php if ($next_href) { ?><li><a href="<?php echo $next_href ?>" class="btn_b01">下一篇</a></li><?php } ?>
-        </ul>
-        <?php } ?>
-
-        <ul class="bo_v_com">
-            <?php if ($update_href) { ?><li><a href="<?php echo $update_href ?>" class="btn_b01">修改</a></li><?php } ?>
-            <?php if ($delete_href) { ?><li><a href="<?php echo $delete_href ?>" class="btn_b01" onclick="del(this.href); return false;">删除</a></li><?php } ?>
-            <?php if ($copy_href) { ?><li><a href="<?php echo $copy_href ?>" class="btn_admin" onclick="board_move(this.href); return false;">复制</a></li><?php } ?>
-            <?php if ($move_href) { ?><li><a href="<?php echo $move_href ?>" class="btn_admin" onclick="board_move(this.href); return false;">移动</a></li><?php } ?>
-            <?php if ($search_href) { ?><li><a href="<?php echo $search_href ?>" class="btn_b01">搜索</a></li><?php } ?>
-             <?php if ($is_admin) { ?><li><a href="<?php echo $list_href ?>" class="btn_b01">目录</a></li><?php } ?>
-            <?php if ($reply_href) { ?><li><a href="<?php echo $reply_href ?>" class="btn_b01">回复</a></li><?php } ?>
-            <?php if ($write_href) { ?><li><a href="<?php echo $write_href ?>" class="btn_b02">发表主题</a></li><?php } ?>
-        </ul>
-        <?php
-        $link_buttons = ob_get_contents();
-        ob_end_flush();
-         ?>
-    </div>
-    <!-- } 论坛顶部按钮结束 -->
-
     <section id="bo_v_atc">
         <h2 id="bo_v_atc_title">全文</h2>
 
@@ -184,7 +155,24 @@ add_stylesheet('<link rel="stylesheet" href="'.$board_skin_url.'/style.css">', 0
 
     <!-- 超链接输入及输出开始 { -->
     <div id="bo_v_bot">
-        <?php echo $link_buttons ?>
+        <?php if ($prev_href || $next_href) { ?>
+        <div class="bo_v_nb">
+            <?php if ($prev_href) { ?><a href="<?php echo $prev_href ?>">上一篇</a><?php } ?>&nbsp;&nbsp;&nbsp;
+            <?php if ($next_href) { ?><a href="<?php echo $next_href ?>">下一篇</a><?php } ?>
+        </div>
+        <?php } ?>
+    </div>
+    <div id="bo_v_bot">
+        <ul class="bo_v_com">
+            <?php if ($update_href) { ?><li><a href="<?php echo $update_href ?>" class="btn_b01">修改</a></li><?php } ?>
+            <?php if ($delete_href) { ?><li><a href="<?php echo $delete_href ?>" class="btn_b01" onclick="del(this.href); return false;">删除</a></li><?php } ?>
+            <?php if ($copy_href) { ?><li><a href="<?php echo $copy_href ?>" class="btn_admin" onclick="board_move(this.href); return false;">复制</a></li><?php } ?>
+            <?php if ($move_href) { ?><li><a href="<?php echo $move_href ?>" class="btn_admin" onclick="board_move(this.href); return false;">移动</a></li><?php } ?>
+            <?php if ($search_href) { ?><li><a href="<?php echo $search_href ?>" class="btn_b01">搜索</a></li><?php } ?>
+             <?php if ($is_admin) { ?><li><a href="<?php echo $list_href ?>" class="btn_b01">目录</a></li><?php } ?>
+            <?php if ($reply_href) { ?><li><a href="<?php echo $reply_href ?>" class="btn_b01">回复</a></li><?php } ?>
+            <?php if ($write_href) { ?><li><a href="<?php echo $write_href ?>" class="btn_b02">发表主题</a></li><?php } ?>
+        </ul>
     </div>
     <!-- } 超链接输入及输出结束 -->
 

@@ -7,7 +7,7 @@ list($w,$h)=explode(",",$options);
 ?>
 
 <!-- <?php echo $bo_subject; ?> 最新文章开始 { -->
-<div class="banner">
+<div class="bann">
     <ul>
     <?php for ($i=0; $i<count($list); $i++) {  
 	    

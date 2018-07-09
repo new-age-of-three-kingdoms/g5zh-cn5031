@@ -23,7 +23,7 @@ list($w,$h)=explode(",",$options);
         if($thumb['src'])
             $img_content = '<img src="'.$thumb['src'].'" alt="'.$list[$i]['subject'].'" width="'.$w.'" height="'.$h.'">';
         else
-            $img_content = '<span style="width:'.$w.'px;height:'.$h.'px">no image</span>';
+            $img_content = '<img src="'.$latest_skin_url.'/img/default.jpg" alt="'.$list[$i]['subject'].'" width="'.$w.'" height="'.$h.'">';
 	?>
         <li class="<?php echo $class ?>" >
             <?php
