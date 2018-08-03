@@ -1,0 +1,12 @@
+# use glob syntax.
+syntax: glob
+
+# phpstorm project files
+.idea
+
+.git
+
+data/cache
+data/session
+data/log
+#data/dbconfig.php
