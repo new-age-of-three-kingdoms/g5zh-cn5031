@@ -18,7 +18,7 @@ list($w,$h)=explode(",",$options);
 			else
 				$img_content = '<span style="width:'.$w.'px;height:'.$h.'px">no image</span>';
 		?>    
-		<li class="slider-item"><a href="<?php echo $list[$i]['href']; ?>"><?php echo $img_content; ?><span class="slider-title"><em><?php echo $list[$i]['subject']; ?></em></span></a></li>
+		<li class="slider-item"><a href="<?php echo $list[$i]['wr_link1']; ?>"><?php echo $img_content; ?><span class="slider-title"><em><?php echo $list[$i]['subject']; ?></em></span></a></li>
 		<?php }  ?>
 		<?php if (count($list) == 0) { //没有内容时  ?>
 		<li>没有主题内容可以显示</li>
