@@ -97,7 +97,7 @@ add_stylesheet('<link rel="stylesheet" href="'.$board_skin_url.'/style.css">', 0
         if($v_img_count) {
             echo "<div id=\"bo_v_img\">\n";
 
-            for ($i=1; $i<=count($view['file']); $i++) {
+            for ($i=0; $i<=count($view['file']); $i++) {
                 if ($view['file'][$i]['view']) {
                     //echo $view['file'][$i]['view'];
                     echo get_view_thumbnail($view['file'][$i]['view']);

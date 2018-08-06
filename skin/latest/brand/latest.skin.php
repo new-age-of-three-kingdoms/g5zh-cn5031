@@ -1,15 +1,18 @@
 <?php
 if (!defined('_GNUBOARD_')) exit; //禁止单独访问此页
 
-// add_stylesheet('css 文本', 显示顺序); 数字越小的优先显示
-add_stylesheet('<link rel="stylesheet" href="'.$latest_skin_url.'/style.css">', 0);
+// add_stylesheet('css 文本', 显示顺序); 数字越小的优先显示示
+add_stylesheet('<link rel="stylesheet" href="'.$latest_skin_url.'/css/normalize.css">', 0);
+add_stylesheet('<link rel="stylesheet" href="'.$latest_skin_url.'/css/demo.css">', 1);
+//add_stylesheet('<link rel="stylesheet" href="'.$board_skin_url.'/css/component.css">', 2);
+add_stylesheet('<link rel="stylesheet" href="'.$latest_skin_url.'/style.css">', 3);
 list($w,$h)=explode(",",$options);
 ?>
 
 <!-- <?php echo $bo_subject; ?> 最新文章开始 { -->
 <div class="lt">
     <div class="latest_title"><span class="left"><a href="<?php echo G5_BBS_URL ?>/board.php?bo_table=<?php echo $bo_table ?>"><img src="<?php echo $latest_skin_url; ?>/img/latest_title_<?php echo $bo_table; ?>.png" /></a></span><span class="right"><a href="<?php echo G5_BBS_URL ?>/board.php?bo_table=<?php echo $bo_table ?>"><img src="<?php echo $latest_skin_url; ?>/img/more.png" /></a><img src="<?php echo $latest_skin_url; ?>/img/more_icon.png" /></span></div>
-    <ul>
+    <ul class="grid-ul">
     <?php for ($i=0; $i<count($list); $i++) {  
 	    
 		$thumb = get_list_thumbnail($bo_table, $list[$i]['wr_id'], $w, $h);
@@ -26,9 +29,17 @@ list($w,$h)=explode(",",$options);
             $img_content = '<img src="'.$latest_skin_url.'/img/default.jpg" alt="'.$list[$i]['subject'].'" width="'.$w.'" height="'.$h.'">';
 	?>
         <li class="<?php echo $class ?>" >
+            <div class="grid-li">
+            <figure class="effect-layla">
+            <?php echo "<a href='".$list[$i]['href']."'>".$img_content."</a>"; ?>
+                <figcaption>
+                    <!--<h2><?php echo $list[$i]['subject'] ?></h2>
+                    <p>When Layla appears, she brings an eternal summer along.</p>-->
+                </figcaption>			
+            </figure>
+            </div>
             <?php
-            echo "<a href='".$list[$i]['href']."'>".$img_content."</a>";
-            echo "<div class='title'><a href='".$list[$i]['href']."'>";
+			echo "<div class='title'><a href='".$list[$i]['href']."'>";
             echo $list[$i]['subject'];
 			echo "</a>";
 			echo "<span class='date'>".date("Y.m", strtotime($list[$i]['wr_datetime']))."</span></div>";
