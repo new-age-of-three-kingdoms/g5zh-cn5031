@@ -18,13 +18,13 @@ include_once(G5_PATH.'/head_index.php');
 
 <h2 class="sound_only">最新文章</h2>
 <!-- 最新文章开始 { -->
-    <div style="width:960px;">
+    <div style="width:960px; height:740px;">
 		<?php echo latest("brand", "brand", 6, 25, 1, "300,240"); ?>
     </div>
-    <div style="width:960px;">
+    <div style="width:960px; height:740px;">
 		<?php echo latest("brand", "food", 6, 25, 1, "300,240"); ?>
     </div>
-    <div style="width:960px;">
+    <div style="width:960px; height:740px;">
 		<?php echo latest("brand", "space", 6, 25, 1, "300,240"); ?>
     </div>
     

@@ -253,6 +253,7 @@ html.no-overflowscrolling #autosave_pop {height:auto;max-height:10000px !importa
 #bo_vc_sns {margin:0;padding:0;list-style:none;zoom:1}
 #bo_vc_sns:after {display:block;visibility:hidden;clear:both;content:""}
 #bo_vc_sns li {float:left;margin:0 20px 0 0}
+<<<<<<< HEAD
 #bo_vc_sns input {margin:0 0 0 5px}
 
 .title-subject {
@@ -477,3 +478,6 @@ figure.effect-layla:hover img {
 	-webkit-transition-delay: 0.15s;
 	transition-delay: 0.15s;
 }
+=======
+#bo_vc_sns input {margin:0 0 0 5px}
+>>>>>>> parent of bd06081... mid-image style mod

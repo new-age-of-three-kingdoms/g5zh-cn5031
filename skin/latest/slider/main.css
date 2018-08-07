@@ -14,11 +14,3 @@ address, cite, dfn, em, var {font-style: normal;}
 .banner ul .slider-item {width:960px!important; float: left!important;height:410px!important; position: relative; overflow: hidden;}
 .banner ul .slider-item .slider-title {position: absolute;left: 0;bottom: 0;width: 960px;max-height: 56px;padding: 15px;text-align:left;line-height: 28px;color: #fff;font-size: 18px;font-weight: bold;background: -webkit-linear-gradient(top, transparent, rgba(0,0,0,0.9));background: url(../images/slider-info-bg.png) \9;}
 .banner .progress{position:absolute;left:0;bottom:0;width:15%;min-height:3px;overflow:hidden;z-index:2;background:#f60;}
-
-.bottom-div {
-	position:relative;
-	text-align:center;
-}
-.bottom-div img {
-	margin:20px auto;
-}

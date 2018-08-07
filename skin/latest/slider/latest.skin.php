@@ -18,7 +18,7 @@ list($w,$h)=explode(",",$options);
 			else
 				$img_content = '<span style="width:'.$w.'px;height:'.$h.'px">no image</span>';
 		?>    
-		<li class="slider-item"><a href="<?php echo $list[$i]['wr_link1']; ?>"><?php echo $img_content; ?><span class="slider-title"><em><?php //echo $list[$i]['subject']; ?></em></span></a></li>
+		<li class="slider-item"><a href="<?php echo $list[$i]['wr_link1']; ?>"><?php echo $img_content; ?><span class="slider-title"><em><?php echo $list[$i]['subject']; ?></em></span></a></li>
 		<?php }  ?>
 		<?php if (count($list) == 0) { //没有内容时  ?>
 		<li>没有主题内容可以显示</li>
@@ -28,7 +28,7 @@ list($w,$h)=explode(",",$options);
 	<a href="javascript:void(0);" class="unslider-arrow04 prev"><img class="arrow" id="al" src="<?php echo $latest_skin_url; ?>/img/arrowl.png" alt="prev" width="20" height="35"></a>
 	<a href="javascript:void(0);" class="unslider-arrow04 next"><img class="arrow" id="ar" src="<?php echo $latest_skin_url; ?>/img/arrowr.png" alt="next" width="20" height="37"></a>
 </div>
-<div class="bottom-div"><img src="<?php echo $latest_skin_url; ?>/img/bottom-title.jpg" width="248" height="39"></div>
+
 
 <!--<script src="<?php echo $latest_skin_url; ?>/jquery-1.11.1.min.js"></script>-->
 <!--<script src="<?php echo $latest_skin_url; ?>/unslider.min.bak.js"></script>-->

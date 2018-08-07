@@ -13,9 +13,7 @@ add_stylesheet('<link rel="stylesheet" href="'.$board_skin_url.'/style.css">', 0
 <article id="bo_v" style="width:<?php echo $width; ?>">
     <header>
         <h1 id="bo_v_title">
-            <a href="<?php echo G5_BBS_URL."/board.php?bo_table=".$bo_table ?>"><img src="<?php echo $board_skin_url; ?>/img/board_title_<?php echo $bo_table; ?>.jpg" height="24" /></a>
-            <img src="<?php echo $board_skin_url; ?>/img/title-split.jpg" width="11" height="17" />
-            <span class="title-subject"><?php echo $view['subject']; ?></span>
+            <img src="<?php echo $board_skin_url; ?>/img/board_title_<?php echo $bo_table; ?>.jpg" height="24" />
         </h1>
     </header>
 
@@ -97,7 +95,7 @@ add_stylesheet('<link rel="stylesheet" href="'.$board_skin_url.'/style.css">', 0
         if($v_img_count) {
             echo "<div id=\"bo_v_img\">\n";
 
-            for ($i=1; $i<=count($view['file']); $i++) {
+            for ($i=0; $i<=count($view['file']); $i++) {
                 if ($view['file'][$i]['view']) {
                     //echo $view['file'][$i]['view'];
                     echo get_view_thumbnail($view['file'][$i]['view']);

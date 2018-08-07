@@ -14,5 +14,3 @@ data/dbconfig_upload.php
 .idea/
 .hgignore
 
-*\thumb-*
-
