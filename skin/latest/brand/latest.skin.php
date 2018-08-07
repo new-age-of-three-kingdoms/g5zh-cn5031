@@ -27,13 +27,16 @@ list($w,$h)=explode(",",$options);
 	?>
         <li class="<?php echo $class ?>" >
 <<<<<<< HEAD
+<<<<<<< HEAD
             <div class="grid">
+=======
+            <div class="grid-li">
+>>>>>>> parent of d0046e6... mid-mouseover effect finished
             <figure class="effect-layla">
-            <?php echo $img_content; ?>
+            <?php echo "<a href='".$list[$i]['href']."'>".$img_content."</a>"; ?>
                 <figcaption>
-                        <h2><?php echo $list[$i]['subject'] ?></h2>
-                        <p><?php echo $list[$i]['wr_1'] ?> </p>
-                        <a href="<?php echo $list[$i]['href'] ?>" target="_blank">View more</a>
+                    <!--<h2><?php echo $list[$i]['subject'] ?></h2>
+                    <p>When Layla appears, she brings an eternal summer along.</p>-->
                 </figcaption>			
             </figure>
             </div>

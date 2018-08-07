@@ -82,8 +82,13 @@ add_stylesheet('<link rel="stylesheet" href="'.$board_skin_url.'/style.css">', 0
             <ul class="gall_con">
                 <li class="gall_href">
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <div class="grid">
+=======
+                <div class="">
+>>>>>>> parent of d0046e6... mid-mouseover effect finished
                 <figure class="effect-layla">
+                    <a href="<?php echo $list[$i]['href'] ?>">
                     <?php
 					$thumb = get_list_thumbnail($board['bo_table'], $list[$i]['wr_id'], $board['bo_gallery_width'], $board['bo_gallery_height']);
 
@@ -94,11 +99,11 @@ add_stylesheet('<link rel="stylesheet" href="'.$board_skin_url.'/style.css">', 0
 					}
 					echo $img_content;
                     ?>
+                    </a>
                     <figcaption>
                         <h2><?php echo $list[$i]['subject'] ?></h2>
-                        <p><?php echo $list[$i]['wr_1'] ?> <br /> <?php echo date("Y.m", strtotime($list[$i]['wr_datetime'])) ?></p>
-                        <a href="<?php echo $list[$i]['href'] ?>" target="_blank">View more</a>
-                    </figcaption>		
+                        <!--<p>When Layla appears, she brings an eternal summer along.</p>-->
+                    </figcaption>			
                 </figure>
                 </div>
 =======
