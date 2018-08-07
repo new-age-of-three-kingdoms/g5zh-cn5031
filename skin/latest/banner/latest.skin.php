@@ -26,7 +26,7 @@ list($w,$h)=explode(",",$options);
 	?>
         <li class="<?php echo $class ?>" >
             <?php
-            echo "<a href='".$list[$i]['href']."'>".$img_content."</a>";
+            echo "<a href='".$list[$i]['wr_link1']."'>".$img_content."</a>";
             ?>
         </li>
     <?php }  ?>

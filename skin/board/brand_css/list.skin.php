@@ -3,10 +3,7 @@ if (!defined('_GNUBOARD_')) exit; //禁止单独访问此页
 include_once(G5_LIB_PATH.'/thumbnail.lib.php');
 
 // add_stylesheet('css 文本', 显示顺序); 数字越小的优先显示
-add_stylesheet('<link rel="stylesheet" href="'.$board_skin_url.'/css/normalize.css">', 0);
-add_stylesheet('<link rel="stylesheet" href="'.$board_skin_url.'/css/demo.css">', 1);
-//add_stylesheet('<link rel="stylesheet" href="'.$board_skin_url.'/css/component.css">', 2);
-add_stylesheet('<link rel="stylesheet" href="'.$board_skin_url.'/style.css">', 3);
+add_stylesheet('<link rel="stylesheet" href="'.$board_skin_url.'/style.css">', 0);
 ?>
 
 <!-- 论坛版块目录开始 { -->
@@ -84,25 +81,23 @@ add_stylesheet('<link rel="stylesheet" href="'.$board_skin_url.'/style.css">', 3
             </span>
             <ul class="gall_con">
                 <li class="gall_href">
-                <div class="grid">
-                <figure class="effect-layla">
+                    <a href="<?php echo $list[$i]['href'] ?>">
                     <?php
-					$thumb = get_list_thumbnail($board['bo_table'], $list[$i]['wr_id'], $board['bo_gallery_width'], $board['bo_gallery_height']);
+                    if ($list[$i]['is_notice']) { // 公告  ?>
+                        <strong style="width:<?php echo $board['bo_gallery_width'] ?>px;height:<?php echo $board['bo_gallery_height'] ?>px">公告</strong>
+                    <?php } else {
+                        $thumb = get_list_thumbnail($board['bo_table'], $list[$i]['wr_id'], $board['bo_gallery_width'], $board['bo_gallery_height']);
 
-					if($thumb['src']) {
-						$img_content = '<img src="'.$thumb['src'].'" alt="'.$thumb['alt'].'" width="'.$board['bo_gallery_width'].'" height="'.$board['bo_gallery_height'].'">';
-					} else {
-						$img_content = '<div style="width:'.$board['bo_gallery_width'].'px;height:'.$board['bo_gallery_height'].'px">no image</div>';
-					}
-					echo $img_content;
-                    ?>
-                    <figcaption>
-                        <h2><?php echo $list[$i]['subject'] ?></h2>
-                        <p><?php echo $list[$i]['wr_1'] ?> <br /> <?php echo date("Y.m", strtotime($list[$i]['wr_datetime'])) ?></p>
-                        <a href="<?php echo $list[$i]['href'] ?>" target="_blank">View more</a>
-                    </figcaption>		
-                </figure>
-                </div>
+                        if($thumb['src']) {
+                            $img_content = '<img src="'.$thumb['src'].'" alt="'.$thumb['alt'].'" width="'.$board['bo_gallery_width'].'" height="'.$board['bo_gallery_height'].'">';
+                        } else {
+                            $img_content = '<div style="width:'.$board['bo_gallery_width'].'px;height:'.$board['bo_gallery_height'].'px">no image</div>';
+                        }
+
+                        echo $img_content;
+                    }
+                     ?>
+                    </a>
                 </li>
                 <li class="gall_text_href" style="width:<?php echo $board['bo_gallery_width'] ?>px">
                     <?php
