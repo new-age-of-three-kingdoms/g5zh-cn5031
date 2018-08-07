@@ -2,6 +2,7 @@
 data/cache/
 data/session/
 data/log/
+data/dbconfig_upload.php
 
 /.htaccess
 /license.txt

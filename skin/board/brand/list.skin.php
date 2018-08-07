@@ -84,9 +84,8 @@ add_stylesheet('<link rel="stylesheet" href="'.$board_skin_url.'/style.css">', 3
             </span>
             <ul class="gall_con">
                 <li class="gall_href">
-                <div class="">
+                <div class="grid">
                 <figure class="effect-layla">
-                    <a href="<?php echo $list[$i]['href'] ?>">
                     <?php
 					$thumb = get_list_thumbnail($board['bo_table'], $list[$i]['wr_id'], $board['bo_gallery_width'], $board['bo_gallery_height']);
 
@@ -97,11 +96,11 @@ add_stylesheet('<link rel="stylesheet" href="'.$board_skin_url.'/style.css">', 3
 					}
 					echo $img_content;
                     ?>
-                    </a>
                     <figcaption>
                         <h2><?php echo $list[$i]['subject'] ?></h2>
-                        <!--<p>When Layla appears, she brings an eternal summer along.</p>-->
-                    </figcaption>			
+                        <p><?php echo $list[$i]['wr_1'] ?> <br /> <?php echo date("Y.m", strtotime($list[$i]['wr_datetime'])) ?></p>
+                        <a href="<?php echo $list[$i]['href'] ?>" target="_blank">View more</a>
+                    </figcaption>		
                 </figure>
                 </div>
                 </li>

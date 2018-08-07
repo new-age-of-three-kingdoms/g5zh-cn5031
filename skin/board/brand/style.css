@@ -375,6 +375,8 @@ li.gall_href {
 figure.effect-layla {
 	/*background: #18a367;*/
 	background: #000000;
+	width:300px;
+	height:220px;
 }
 
 figure.effect-layla img {

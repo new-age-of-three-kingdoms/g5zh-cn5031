@@ -29,12 +29,13 @@ list($w,$h)=explode(",",$options);
             $img_content = '<img src="'.$latest_skin_url.'/img/default.jpg" alt="'.$list[$i]['subject'].'" width="'.$w.'" height="'.$h.'">';
 	?>
         <li class="<?php echo $class ?>" >
-            <div class="grid-li">
+            <div class="grid">
             <figure class="effect-layla">
-            <?php echo "<a href='".$list[$i]['href']."'>".$img_content."</a>"; ?>
+            <?php echo $img_content; ?>
                 <figcaption>
-                    <!--<h2><?php echo $list[$i]['subject'] ?></h2>
-                    <p>When Layla appears, she brings an eternal summer along.</p>-->
+                        <h2><?php echo $list[$i]['subject'] ?></h2>
+                        <p><?php echo $list[$i]['wr_1'] ?> </p>
+                        <a href="<?php echo $list[$i]['href'] ?>" target="_blank">View more</a>
                 </figcaption>			
             </figure>
             </div>
